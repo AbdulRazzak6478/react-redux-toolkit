@@ -1,0 +1,41 @@
+
+
+.card{
+    /* margin: 5px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:2px solid lightgrey;
+    padding: 10px 0;
+}
+.name{
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(209, 77, 77);
+    /* text-decoration: underline lightgray; */
+}
+.amount{
+    font-size: larger;
+    font-weight: 600;
+    color:yellow;
+}
+.btn,.incre{
+    outline: none;
+    padding: 4px 10px;
+    margin: 0 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    border:none;
+    background-color:darkgrey;
+}
+.btn:hover{
+    background-color: lightgrey;
+}
+.incre{
+    background-color: lightgray;
+    padding: 5px 10px;
+}
+/* .bonus-card{
+    margin: 2rem 0;
+} */
