@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Accounts.css";
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement, incrementByPayload } from "../slices/accountSlice";
+import { increment, decrement, incrementByPayload ,getUserAccount} from "../slices/accountSlice";
 
 
 
@@ -14,6 +14,7 @@ const Accounts = () => {
     // setAmount((prevState)=>prevState + (+amt));
     dispatch(incrementByPayload(+amt));
     setAmt("");
+    // dispatch(getUserAccount(3))
   }
  function init()
   {
@@ -45,12 +46,13 @@ const Accounts = () => {
             autoFocus
           />
           <button className="btn" onClick={trigger_action}>
-            Increment By {amt.length==0 ?0:amt} +
+            Increment By {amt.length===0 ?0:amt} +
           </button>
-          {/* <button className="btn"
+          <button className="btn"
+          onClick={()=>dispatch(getUserAccount(+amt?+amt:0))}
            >
             Get user amount
-          </button> */}
+          </button>
         </div>
       </div>
     </>
